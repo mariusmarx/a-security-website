@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useParallaxEnabled } from "@/lib/useParallax";
+import { asset } from "@/lib/asset";
 import { cn } from "@/lib/utils";
 
 /** Full-bleed image with a subtle scroll-linked parallax (±8%). */
@@ -40,7 +41,7 @@ export function ParallaxImage({
     <div ref={ref} className={cn("relative overflow-hidden", className)}>
       <motion.div style={{ y }} className="absolute inset-0 h-[116%]">
         <Image
-          src={src}
+          src={asset(src)}
           alt={alt}
           fill
           sizes="100vw"

@@ -9,6 +9,7 @@ import { Reveal, RevealText } from "@/components/ui/Reveal";
 import { Magnetic } from "@/components/ui/Magnetic";
 import { ButtonLink } from "@/components/ui/Button";
 import { useParallaxEnabled } from "@/lib/useParallax";
+import { asset } from "@/lib/asset";
 import { EASE } from "@/lib/motion";
 import type { Pillar } from "@/content/services";
 
@@ -39,7 +40,7 @@ export function ServiceHero({ pillar }: { pillar: Pillar }) {
     >
       <motion.div style={{ y }} className="absolute inset-0 -z-20 h-[118%]">
         <Image
-          src={heroImage[pillar.slug]}
+          src={asset(heroImage[pillar.slug])}
           alt=""
           fill
           priority

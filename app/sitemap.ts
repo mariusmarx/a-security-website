@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { siteMeta } from "@/content/site";
 import { pillars } from "@/content/services";
 
+// Required for `output: "export"` — emit a static sitemap.xml at build time.
+export const dynamic = "force-static";
+
 const lastModified = "2026-06-03";
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -9,6 +9,7 @@ import { Reveal, RevealText } from "@/components/ui/Reveal";
 import { Magnetic } from "@/components/ui/Magnetic";
 import { ButtonLink } from "@/components/ui/Button";
 import { useParallaxEnabled } from "@/lib/useParallax";
+import { asset } from "@/lib/asset";
 import { company } from "@/content/site";
 
 export function Hero() {
@@ -30,7 +31,7 @@ export function Hero() {
       {/* Parallax, dark-graded background */}
       <motion.div style={{ y }} className="absolute inset-0 -z-20 h-[118%]">
         <Image
-          src="/images/event-redcarpet-dark.jpg"
+          src={asset("/images/event-redcarpet-dark.jpg")}
           alt=""
           fill
           priority
