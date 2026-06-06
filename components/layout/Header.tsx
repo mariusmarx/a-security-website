@@ -43,6 +43,7 @@ export function Header() {
   const light = !scrolled && !open; // light (paper) text over the dark hero
 
   return (
+    <>
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
@@ -88,11 +89,15 @@ export function Header() {
           <Menu strokeWidth={1.5} className="h-6 w-6" />
         </button>
       </Container>
-
-      <AnimatePresence>
-        {open && <MobileMenu onClose={() => setOpen(false)} pathname={pathname} />}
-      </AnimatePresence>
     </header>
+
+    {/* Rendered OUTSIDE <header> on purpose: the header's scroll backdrop-blur
+        becomes a containing block for fixed descendants in Safari, which would
+        trap this full-screen overlay inside the 80px header bar. */}
+    <AnimatePresence>
+      {open && <MobileMenu onClose={() => setOpen(false)} pathname={pathname} />}
+    </AnimatePresence>
+    </>
   );
 }
 
