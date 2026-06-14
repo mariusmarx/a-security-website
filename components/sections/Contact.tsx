@@ -8,36 +8,29 @@ import { contact } from "@/content/site";
 
 export function Contact() {
   return (
-    <Section
-      id="kontakt"
-      tone="ink"
-      size="lg"
-      className="[--color-line:var(--color-line-inv)]"
-    >
+    <Section id="kontakt" tone="cream" size="lg">
       <Container>
         <div className="grid grid-cols-1 gap-y-16 md:grid-cols-12 md:gap-x-12">
           {/* Invitation + channels */}
           <div className="md:col-span-5">
             <Reveal>
-              <Eyebrow index="05" tone="dark">
-                Kontakt
-              </Eyebrow>
+              <Eyebrow index="05">Kontakt</Eyebrow>
             </Reveal>
-            <h2 className="mt-8 text-h1 font-semibold uppercase tracking-tight text-paper">
+            <h2 className="mt-8 text-h1 text-ink">
               <RevealText
                 label="Sprechen wir über Ihr Projekt."
                 lines={[
                   "Sprechen wir",
                   <Fragment key="l2">
-                    über Ihr Projekt<span className="text-gold">.</span>
+                    über Ihr Projekt<span className="text-gold-deep">.</span>
                   </Fragment>,
                 ]}
               />
             </h2>
             <Reveal delay={0.3}>
-              <p className="measure-tight mt-8 text-body text-mist">
-                Sie benötigen einen Sicherheitsdienst, einen professionellen
-                Reinigungsservice oder Eventsupport für Ihre Veranstaltung? Wir
+              <p className="measure-tight mt-8 text-body text-stone">
+                Sie benötigen einen Sicherheitsdienst, Eventsupport für Ihre
+                Veranstaltung oder einen professionellen Reinigungsservice? Wir
                 beraten Sie strukturiert, diskret und lösungsorientiert.
               </p>
             </Reveal>
@@ -47,7 +40,7 @@ export function Contact() {
                 <Channel label="Telefon">
                   <a
                     href={contact.phoneHref}
-                    className="tabular-nums transition-colors hover:text-gold"
+                    className="tabular-nums transition-colors hover:text-gold-deep"
                   >
                     {contact.phoneLabel}
                   </a>
@@ -55,7 +48,7 @@ export function Contact() {
                 <Channel label="Mobil">
                   <a
                     href={contact.mobileHref}
-                    className="tabular-nums transition-colors hover:text-gold"
+                    className="tabular-nums transition-colors hover:text-gold-deep"
                   >
                     {contact.mobileLabel}
                   </a>
@@ -63,7 +56,7 @@ export function Contact() {
                 <Channel label="E-Mail">
                   <a
                     href={contact.emailHref}
-                    className="transition-colors hover:text-gold"
+                    className="transition-colors hover:text-gold-deep"
                   >
                     {contact.email}
                   </a>
@@ -80,7 +73,7 @@ export function Contact() {
           {/* Form */}
           <div className="md:col-span-6 md:col-start-7">
             <Reveal delay={0.15}>
-              <div className="border border-line bg-onyx p-7 md:p-10">
+              <div className="border border-line bg-paper p-7 shadow-[0_1px_40px_-24px_rgba(0,0,0,0.25)] md:p-10">
                 <ContactForm />
               </div>
             </Reveal>
@@ -100,10 +93,10 @@ function Channel({
 }) {
   return (
     <div className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-12 sm:items-baseline sm:gap-4">
-      <dt className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-greige sm:col-span-3">
+      <dt className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-stone sm:col-span-3">
         {label}
       </dt>
-      <dd className="text-body text-paper sm:col-span-9">{children}</dd>
+      <dd className="text-body text-ink sm:col-span-9">{children}</dd>
     </div>
   );
 }

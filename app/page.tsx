@@ -16,6 +16,7 @@ const jsonLd = {
   url: siteMeta.url,
   telephone: contact.phoneLabel,
   email: contact.email,
+  foundingDate: company.since,
   areaServed: { "@type": "Country", name: "Deutschland" },
   address: {
     "@type": "PostalAddress",
@@ -26,7 +27,7 @@ const jsonLd = {
   },
   makesOffer: pillars.map((p) => ({
     "@type": "Offer",
-    itemOffered: { "@type": "Service", name: p.brand ?? p.name },
+    itemOffered: { "@type": "Service", name: p.name },
   })),
 };
 

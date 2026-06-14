@@ -17,7 +17,7 @@ export async function generateMetadata({
   const { service } = await params;
   const p = getPillar(service);
   if (!p) return {};
-  const name = p.brand ?? p.name;
+  const name = p.name;
   return {
     title: `${name} — ${p.tagline}`,
     description: p.summary,

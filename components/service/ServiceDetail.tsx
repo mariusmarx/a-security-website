@@ -25,7 +25,7 @@ export function ServiceDetail({ pillar }: { pillar: Pillar }) {
                 <Eyebrow index="—">Überblick</Eyebrow>
               </Reveal>
               <Reveal delay={0.05}>
-                <h2 className="hyphenate mt-8 text-balance text-h1 font-semibold uppercase tracking-tight text-ink">
+                <h2 className="hyphenate mt-8 text-balance text-h1 text-ink">
                   {pillar.tagline}
                 </h2>
               </Reveal>
@@ -53,7 +53,7 @@ export function ServiceDetail({ pillar }: { pillar: Pillar }) {
               <StaggerItem key={g.title}>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 border-b border-line py-12 md:grid-cols-12 md:py-14">
                   <div className="md:col-span-5">
-                    <h3 className="hyphenate text-h3 font-medium tracking-tight text-ink">
+                    <h3 className="hyphenate text-h3 text-ink">
                       {g.title}
                     </h3>
                     {g.intro && (
@@ -91,7 +91,7 @@ export function ServiceDetail({ pillar }: { pillar: Pillar }) {
           alt=""
           className="h-[55vh] md:h-[72vh]"
         />
-        <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/70 via-ink/10 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/65 via-ink/10 to-transparent" />
         <Container className="pointer-events-none absolute inset-x-0 bottom-0 pb-8">
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-paper/85">
             {pillar.imageAlt}
@@ -100,12 +100,10 @@ export function ServiceDetail({ pillar }: { pillar: Pillar }) {
       </section>
 
       {/* Cross-links to other disciplines */}
-      <Section tone="ink" size="lg" className="[--color-line:var(--color-line-inv)]">
+      <Section tone="cream" size="lg">
         <Container>
           <Reveal>
-            <Eyebrow index="—" tone="dark">
-              Weitere Leistungen
-            </Eyebrow>
+            <Eyebrow index="—">Weitere Leistungen</Eyebrow>
           </Reveal>
           <Stagger className="mt-12 border-t border-line" gap={0.1}>
             {others.map((p) => (
@@ -114,16 +112,16 @@ export function ServiceDetail({ pillar }: { pillar: Pillar }) {
                   href={`/${p.slug}`}
                   className="group grid grid-cols-1 items-baseline gap-y-4 border-b border-line py-10 md:grid-cols-12 md:gap-x-8"
                 >
-                  <span className="font-mono text-[0.85rem] tabular-nums text-gold md:col-span-1">
+                  <span className="font-mono text-[0.85rem] tabular-nums text-gold-deep md:col-span-1">
                     {p.index}
                   </span>
-                  <h3 className="text-h2 font-semibold uppercase tracking-tight text-paper transition-colors duration-400 group-hover:text-mist md:col-span-7">
-                    {p.brand ?? p.name}
+                  <h3 className="text-h2 text-ink transition-colors duration-400 group-hover:text-gold-deep md:col-span-7">
+                    {p.name}
                   </h3>
-                  <p className="measure-tight text-small text-mist md:col-span-3">
+                  <p className="measure-tight text-small text-stone md:col-span-3">
                     {p.tagline}
                   </p>
-                  <span className="flex items-center justify-start text-mist transition-colors duration-400 group-hover:text-gold md:col-span-1 md:justify-end">
+                  <span className="flex items-center justify-start text-stone transition-colors duration-400 group-hover:text-gold-deep md:col-span-1 md:justify-end">
                     <ArrowRight
                       strokeWidth={1.5}
                       className="h-5 w-5 transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"

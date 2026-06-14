@@ -64,7 +64,7 @@ export function ContactForm() {
             Bitte wählen
           </option>
           {services.map((s) => (
-            <option key={s} value={s} className="bg-onyx text-paper">
+            <option key={s} value={s} className="bg-paper text-ink">
               {s}
             </option>
           ))}
@@ -74,7 +74,7 @@ export function ContactForm() {
       <div className="flex flex-col gap-2.5">
         <label htmlFor="nachricht" className={labelClass}>
           Nachricht
-          <span className="ml-1 text-gold" aria-hidden="true">
+          <span className="ml-1 text-gold-deep" aria-hidden="true">
             *
           </span>
         </label>
@@ -90,7 +90,7 @@ export function ContactForm() {
       </div>
 
       <p className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-stone">
-        <span className="text-gold" aria-hidden="true">
+        <span className="text-gold-deep" aria-hidden="true">
           *
         </span>{" "}
         Pflichtfeld
@@ -99,7 +99,7 @@ export function ContactForm() {
       <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-2">
         <button
           type="submit"
-          className="group/btn inline-flex items-center justify-center gap-2.5 rounded-none border border-paper bg-paper px-8 py-5 text-[0.78rem] font-medium uppercase tracking-[0.14em] leading-none text-ink transition-colors duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-cream"
+          className="group/btn inline-flex cursor-pointer items-center justify-center gap-2.5 rounded-none border border-ink bg-ink px-8 py-5 text-[0.78rem] font-medium uppercase tracking-[0.14em] leading-none text-paper transition-[color,background-color,border-color] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-slate hover:border-slate"
         >
           Anfrage senden
           <ArrowUpRight
@@ -108,7 +108,7 @@ export function ContactForm() {
           />
         </button>
         {sent && (
-          <p role="status" className="text-small text-mist">
+          <p role="status" className="text-small text-stone">
             Ihr E-Mail-Programm öffnet sich mit der vorbereiteten Anfrage.
           </p>
         )}
@@ -119,7 +119,7 @@ export function ContactForm() {
         Sie uns direkt unter{" "}
         <a
           href={contact.emailHref}
-          className="text-mist underline decoration-gold/50 underline-offset-4 hover:text-paper"
+          className="text-ink underline decoration-gold-deep/50 underline-offset-4 hover:text-gold-deep"
         >
           {contact.email}
         </a>
@@ -130,10 +130,10 @@ export function ContactForm() {
 }
 
 const labelClass =
-  "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-greige";
+  "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-stone";
 
 const inputClass =
-  "w-full rounded-none border-0 border-b border-line bg-transparent px-0 py-3 text-body text-paper placeholder:text-greige focus:border-gold focus:outline-none focus:ring-0";
+  "w-full rounded-none border-0 border-b border-line-strong bg-transparent px-0 py-3 text-body text-ink placeholder:text-greige focus:border-gold-deep focus:outline-none focus:ring-0";
 
 function Field({
   id,
@@ -153,7 +153,7 @@ function Field({
       <label htmlFor={id} className={labelClass}>
         {label}
         {required && (
-          <span className="ml-1 text-gold" aria-hidden="true">
+          <span className="ml-1 text-gold-deep" aria-hidden="true">
             *
           </span>
         )}

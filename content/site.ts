@@ -14,10 +14,11 @@ export const company = {
   legalName: "A-Security",
   shortName: "A-Security",
   proprietor: "Pedram Aghel",
-  claim: "Sicherheit, Reinigung und Eventsupport aus einer Hand.",
+  claim: "Sicherheit, Eventsupport und Reinigung aus einer Hand.",
   city: "Berlin",
-  // TODO: confirm real founding year (event references date back to ~2012).
-  since: "2014",
+  // Founding year confirmed by client (2026-06-14): the company has been active
+  // since 2010 — its long experience should be emphasised across the site.
+  since: "2010",
 } as const;
 
 export const contact = {
@@ -39,9 +40,9 @@ export const contact = {
 
 export const nav: { label: string; href: string }[] = [
   { label: "Sicherheit", href: "/sicherheit" },
-  { label: "Reinigung", href: "/reinigung" },
   { label: "Eventsupport", href: "/eventsupport" },
-  { label: "Warum wir", href: "/#warum" },
+  { label: "Reinigung", href: "/reinigung" },
+  { label: "Über uns", href: "/#ueber-uns" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
 
@@ -59,16 +60,21 @@ export const trustStats: { value: string; label: string }[] = [
 ];
 
 /**
- * Reference clients — taken from the supplied logo set.
- * TODO: confirm permission to display each name publicly.
+ * Clients & references — taken from the supplied logo set.
+ * Split into "Aktuelle Kunden" and "Referenzen" per client request.
+ * TODO: confirm the correct assignment of each name to current vs. reference,
+ * and confirm permission to display each name publicly. (Provisional split.)
  */
-export const clients: string[] = [
+export const currentClients: string[] = [
   "Funkhaus Berlin",
   "Berliner Festspiele",
   "Factory Berlin",
+  "KINDL",
+];
+
+export const referenceClients: string[] = [
   "Four Music",
   "Kickz",
-  "KINDL",
   "Burmester",
   "Sneakersnstuff",
   "Schönbrunn",

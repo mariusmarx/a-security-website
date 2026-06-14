@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { cn } from "@/lib/utils";
-import { ShieldMark } from "./ShieldMark";
 
 /**
- * Lockup: shield mark + wordmark. Inherits text color from context,
- * so it reads correctly on both the paper and ink worlds.
+ * Lockup: official A-Security shield mark + wordmark. The shield is the real
+ * black+gold brand asset (public/brand/asecurity-shield.png); the wordmark text
+ * inherits the surrounding text color, so it reads on any light surface.
  */
 export function Logo({
   className,
@@ -17,7 +19,14 @@ export function Logo({
 }) {
   const inner = (
     <span className={cn("inline-flex items-center gap-3", className)}>
-      <ShieldMark className="h-8 w-auto shrink-0" />
+      <Image
+        src={asset("/brand/asecurity-shield.png")}
+        alt=""
+        width={471}
+        height={612}
+        priority
+        className="h-9 w-auto shrink-0"
+      />
       {withWordmark && (
         <span className="flex flex-col leading-none">
           <span className="text-[0.95rem] font-semibold uppercase tracking-[0.22em]">

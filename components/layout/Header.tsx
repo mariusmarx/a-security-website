@@ -40,63 +40,65 @@ export function Header() {
     };
   }, [open]);
 
-  const light = !scrolled && !open; // light (paper) text over the dark hero
+  // Over the bright hero the header is transparent; on scroll it gets a frosted
+  // paper bar. Text is always ink (dark) — the world is light now.
+  const overHero = !scrolled && !open;
 
   return (
     <>
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
-        scrolled
-          ? "border-b border-line bg-paper/85 text-ink backdrop-blur-md supports-[backdrop-filter]:bg-paper/75"
-          : "border-b border-transparent bg-transparent text-paper",
-      )}
-    >
-      <Container className="flex h-20 items-center justify-between gap-6">
-        <Logo />
+      <header
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 text-ink transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          scrolled
+            ? "border-b border-line bg-paper/85 backdrop-blur-md supports-[backdrop-filter]:bg-paper/75"
+            : "border-b border-transparent bg-transparent",
+        )}
+      >
+        <Container className="flex h-20 items-center justify-between gap-6">
+          <Logo />
 
-        <nav aria-label="Hauptnavigation" className="hidden items-center gap-9 lg:flex">
-          {links.map((item) => (
-            <HeaderLink
-              key={item.href}
-              href={item.href}
-              active={pathname === item.href}
+          <nav aria-label="Hauptnavigation" className="hidden items-center gap-9 lg:flex">
+            {links.map((item) => (
+              <HeaderLink
+                key={item.href}
+                href={item.href}
+                active={pathname === item.href}
+              >
+                {item.label}
+              </HeaderLink>
+            ))}
+            <Link
+              href="/#kontakt"
+              className={cn(
+                "group/btn inline-flex items-center gap-2 rounded-none border px-5 py-3 text-[0.72rem] font-medium uppercase tracking-[0.14em] leading-none transition-colors duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                overHero
+                  ? "border-ink/55 text-ink hover:bg-ink hover:text-paper"
+                  : "border-ink bg-ink text-paper hover:bg-slate hover:border-slate",
+              )}
             >
-              {item.label}
-            </HeaderLink>
-          ))}
-          <Link
-            href="/#kontakt"
-            className={cn(
-              "group/btn inline-flex items-center gap-2 rounded-none border px-5 py-3 text-[0.72rem] font-medium uppercase tracking-[0.14em] leading-none transition-colors duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]",
-              light
-                ? "border-[color-mix(in_oklab,white_30%,transparent)] text-paper hover:bg-paper hover:text-ink"
-                : "border-ink bg-ink text-paper hover:bg-slate",
-            )}
+              Kontakt
+            </Link>
+          </nav>
+
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            aria-label="Menü öffnen"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            className="-mr-1 inline-flex h-11 w-11 cursor-pointer items-center justify-center lg:hidden"
           >
-            Kontakt
-          </Link>
-        </nav>
+            <Menu strokeWidth={1.5} className="h-6 w-6" />
+          </button>
+        </Container>
+      </header>
 
-        <button
-          type="button"
-          onClick={() => setOpen(true)}
-          aria-label="Menü öffnen"
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          className="-mr-1 inline-flex h-11 w-11 items-center justify-center lg:hidden"
-        >
-          <Menu strokeWidth={1.5} className="h-6 w-6" />
-        </button>
-      </Container>
-    </header>
-
-    {/* Rendered OUTSIDE <header> on purpose: the header's scroll backdrop-blur
-        becomes a containing block for fixed descendants in Safari, which would
-        trap this full-screen overlay inside the 80px header bar. */}
-    <AnimatePresence>
-      {open && <MobileMenu onClose={() => setOpen(false)} pathname={pathname} />}
-    </AnimatePresence>
+      {/* Rendered OUTSIDE <header> on purpose: the header's scroll backdrop-blur
+          becomes a containing block for fixed descendants in Safari, which would
+          trap this full-screen overlay inside the 80px header bar. */}
+      <AnimatePresence>
+        {open && <MobileMenu onClose={() => setOpen(false)} pathname={pathname} />}
+      </AnimatePresence>
     </>
   );
 }
@@ -178,7 +180,7 @@ function MobileMenu({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4, ease: EASE.out }}
-      className="fixed inset-0 z-50 flex flex-col bg-ink text-paper lg:hidden"
+      className="metallic fixed inset-0 z-50 flex flex-col text-ink lg:hidden"
     >
       <Container className="flex h-20 shrink-0 items-center justify-between">
         <Logo />
@@ -186,7 +188,7 @@ function MobileMenu({
           type="button"
           onClick={onClose}
           aria-label="Menü schließen"
-          className="-mr-1 inline-flex h-11 w-11 items-center justify-center"
+          className="-mr-1 inline-flex h-11 w-11 cursor-pointer items-center justify-center"
         >
           <X strokeWidth={1.5} className="h-6 w-6" />
         </button>
@@ -205,9 +207,9 @@ function MobileMenu({
               <Link
                 href={item.href}
                 aria-current={pathname === item.href ? "page" : undefined}
-                className="flex items-baseline gap-4 py-5 text-h3 font-semibold uppercase tracking-tight"
+                className="flex items-baseline gap-4 py-5 text-h3 font-medium tracking-tight text-ink"
               >
-                <span className="font-mono text-[0.7rem] tracking-[0.2em] text-gold">
+                <span className="font-mono text-[0.7rem] tracking-[0.2em] text-gold-deep">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 {item.label}
@@ -218,11 +220,11 @@ function MobileMenu({
       </Container>
 
       <Container className="shrink-0 pb-10">
-        <div className="flex flex-col gap-1 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-mist">
-          <a href={contact.phoneHref} className="tabular-nums hover:text-paper">
+        <div className="flex flex-col gap-1 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-stone">
+          <a href={contact.phoneHref} className="tabular-nums hover:text-ink">
             {contact.phoneLabel}
           </a>
-          <a href={contact.emailHref} className="hover:text-paper">
+          <a href={contact.emailHref} className="hover:text-ink">
             {contact.email}
           </a>
         </div>

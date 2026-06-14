@@ -8,26 +8,26 @@ const year = 2026; // build-time constant
 
 export function Footer() {
   return (
-    <footer className="relative bg-ink text-mist [--color-line:var(--color-line-inv)]">
-      {/* gold-60% top hairline */}
+    <footer className="relative bg-bone text-stone">
+      {/* gold top hairline */}
       <div
         aria-hidden
         className="h-px w-full"
         style={{
           background:
-            "color-mix(in oklab, var(--color-gold) 55%, transparent)",
+            "color-mix(in oklab, var(--color-gold-deep) 60%, transparent)",
         }}
       />
       <Container className="grid grid-cols-1 gap-x-8 gap-y-14 py-20 md:grid-cols-12 md:py-24">
         {/* Brand + tagline */}
         <div className="md:col-span-5">
-          <Logo className="text-paper" href={null} />
-          <p className="measure-tight mt-7 text-balance text-lead leading-snug text-mist">
+          <Logo className="text-ink" href={null} />
+          <p className="measure-tight mt-7 text-balance text-lead leading-snug text-slate">
             {company.claim}
           </p>
           <p className="mt-6 max-w-sm text-small text-stone">
-            {company.name} — Sicherheitsdienst, Reinigung und Eventsupport mit
-            Sitz in {company.city}.
+            {company.name} — Sicherheitsdienst, Eventsupport und Reinigung mit
+            Sitz in {company.city}, tätig seit {company.since}.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export function Footer() {
 
         {/* Leistungen */}
         <nav aria-label="Leistungen" className="md:col-span-3">
-          <h2 className="eyebrow text-greige">Leistungen</h2>
+          <h2 className="eyebrow text-stone">Leistungen</h2>
           <ul className="mt-6 flex flex-col gap-3.5">
             {nav
               .filter((n) => ["/sicherheit", "/reinigung", "/eventsupport"].includes(n.href))
@@ -49,22 +49,22 @@ export function Footer() {
 
         {/* Kontakt */}
         <div className="md:col-span-3">
-          <h2 className="eyebrow text-greige">Kontakt</h2>
+          <h2 className="eyebrow text-stone">Kontakt</h2>
           <address className="mt-6 flex flex-col gap-3.5 not-italic">
-            <span className="text-small text-mist">
+            <span className="text-small text-slate">
               {contact.address.street}
               <br />
               {contact.address.zip} {contact.address.city}
             </span>
             <a
               href={contact.phoneHref}
-              className="font-mono text-[0.8rem] tabular-nums tracking-wide text-mist transition-colors hover:text-paper"
+              className="font-mono text-[0.8rem] tabular-nums tracking-wide text-slate transition-colors hover:text-ink"
             >
               {contact.phoneLabel}
             </a>
             <a
               href={contact.emailHref}
-              className="font-mono text-[0.8rem] tracking-wide text-mist transition-colors hover:text-paper"
+              className="font-mono text-[0.8rem] tracking-wide text-slate transition-colors hover:text-ink"
             >
               {contact.email}
             </a>
@@ -107,8 +107,8 @@ function FooterLink({
       href={href}
       className={
         small
-          ? "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-stone transition-colors hover:text-paper"
-          : "group inline-flex w-fit items-center text-small text-mist transition-colors hover:text-paper"
+          ? "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-stone transition-colors hover:text-ink"
+          : "group inline-flex w-fit items-center text-small text-slate transition-colors hover:text-ink"
       }
     >
       {children}

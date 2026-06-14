@@ -1,6 +1,8 @@
 /**
  * The three service pillars of A-Security & Service GmbH.
  * Copy is taken verbatim (lightly tightened) from the client's source documents.
+ *
+ * Order (per client): 01 Sicherheit · 02 Eventsupport · 03 Reinigung.
  */
 
 export type ServiceGroup = {
@@ -13,8 +15,6 @@ export type Pillar = {
   slug: "sicherheit" | "reinigung" | "eventsupport";
   index: string;
   name: string;
-  /** Brand name shown as an overline on the detail page, if any. */
-  brand?: string;
   tagline: string;
   /** One-liner for the homepage services index. */
   summary: string;
@@ -113,60 +113,8 @@ export const pillars: Pillar[] = [
     ],
   },
   {
-    slug: "reinigung",
-    index: "02",
-    name: "Reinigung",
-    brand: "A-Cleaning",
-    tagline: "Sauberkeit mit System",
-    summary:
-      "Sauberkeit als Teil von Werterhalt und professionellem Auftreten. Zuverlässige Reinigung für Unternehmen, Privathaushalte und Veranstaltungsorte.",
-    lead: "Sauberkeit ist ein wesentlicher Bestandteil von Sicherheit, Werterhalt und professionellem Auftreten. Mit A-Cleaning bietet die A-Security & Service GmbH zuverlässige Reinigungsdienstleistungen — strukturiert geplant, fachgerecht umgesetzt und regelmäßig kontrolliert.",
-    highlights: ["Unterhaltsreinigung", "Grundreinigung", "Fenster- & Glasreinigung"],
-    image: "/images/chauffeur-venue.jpg",
-    imageAlt: "Gepflegtes Berliner Geschäftsgebäude aus Klinker bei Tageslicht.",
-    groups: [
-      {
-        title: "Unterhaltsreinigung",
-        intro:
-          "Die regelmäßige Unterhaltsreinigung gewährleistet dauerhaft hygienische und gepflegte Räumlichkeiten — geeignet für Büros, Praxen, Gewerbeflächen und private Objekte.",
-        points: [
-          "Reinigung und Pflege aller Bodenbeläge",
-          "Reinigung von Oberflächen, Arbeits- und Kontaktflächen",
-          "Möbelreinigung und -pflege",
-          "Entleerung und Reinigung der Abfallbehälter",
-          "Reinigung und Desinfektion sanitärer Anlagen",
-          "Reinigung von Küchen- und Pausenbereichen",
-          "Sichtreinigung von Türen, Fenstern und Griffbereichen",
-        ],
-      },
-      {
-        title: "Grundreinigung",
-        intro:
-          "Die Grundreinigung ist eine intensive, tiefgehende Reinigung in größeren Abständen. Sie dient der Substanzerhaltung und schafft die Grundlage für eine effektive Unterhaltsreinigung. Empfohlen: 1–2 Mal jährlich.",
-        points: [
-          "Intensive Bodenreinigung und Pflege",
-          "Reinigung von Möbeln, Schränken und Regalen (innen & außen)",
-          "Reinigung von Wänden, Türen, Rahmen, Lampen und Schaltern",
-          "Entfernung hartnäckiger Verschmutzungen",
-          "Spezialreinigungen wie Entkalkung, Desinfektion oder Polierarbeiten",
-        ],
-      },
-      {
-        title: "Fenster- und Glasreinigung",
-        intro:
-          "Unsere Fensterreinigung sorgt für klare Sicht und ein gepflegtes Erscheinungsbild.",
-        points: [
-          "Glasflächen aller Art",
-          "Fensterrahmen und -kanten innen und außen",
-          "Fensterbänke",
-          "Glastüren, Schaufenster, Spiegel, Wintergärten und Fassaden",
-        ],
-      },
-    ],
-  },
-  {
     slug: "eventsupport",
-    index: "03",
+    index: "02",
     name: "Eventsupport",
     tagline: "Veranstaltungen, sicher umgesetzt",
     summary:
@@ -210,6 +158,57 @@ export const pillars: Pillar[] = [
       },
     ],
   },
+  {
+    slug: "reinigung",
+    index: "03",
+    name: "Reinigung",
+    tagline: "Sauberkeit mit System",
+    summary:
+      "Sauberkeit als Teil von Werterhalt und professionellem Auftreten. Zuverlässige Reinigung für Unternehmen, Privathaushalte und Veranstaltungsorte.",
+    lead: "Sauberkeit ist ein wesentlicher Bestandteil von Sicherheit, Werterhalt und professionellem Auftreten. Als A-Security & Service GmbH bieten wir zuverlässige Reinigungsdienstleistungen — strukturiert geplant, fachgerecht umgesetzt und regelmäßig kontrolliert.",
+    highlights: ["Unterhaltsreinigung", "Grundreinigung", "Fenster- & Glasreinigung"],
+    image: "/images/chauffeur-venue.jpg",
+    imageAlt: "Gepflegtes Berliner Geschäftsgebäude aus Klinker bei Tageslicht.",
+    groups: [
+      {
+        title: "Unterhaltsreinigung",
+        intro:
+          "Die regelmäßige Unterhaltsreinigung gewährleistet dauerhaft hygienische und gepflegte Räumlichkeiten — geeignet für Büros, Praxen, Gewerbeflächen und private Objekte.",
+        points: [
+          "Reinigung und Pflege aller Bodenbeläge",
+          "Reinigung von Oberflächen, Arbeits- und Kontaktflächen",
+          "Möbelreinigung und -pflege",
+          "Entleerung und Reinigung der Abfallbehälter",
+          "Reinigung und Desinfektion sanitärer Anlagen",
+          "Reinigung von Küchen- und Pausenbereichen",
+          "Sichtreinigung von Türen, Fenstern und Griffbereichen",
+        ],
+      },
+      {
+        title: "Grundreinigung",
+        intro:
+          "Die Grundreinigung ist eine intensive, tiefgehende Reinigung in größeren Abständen. Sie dient der Substanzerhaltung und schafft die Grundlage für eine effektive Unterhaltsreinigung. Empfohlen: 1–2 Mal jährlich.",
+        points: [
+          "Intensive Bodenreinigung und Pflege",
+          "Reinigung von Möbeln, Schränken und Regalen (innen & außen)",
+          "Reinigung von Wänden, Türen, Rahmen, Lampen und Schaltern",
+          "Entfernung hartnäckiger Verschmutzungen",
+          "Spezialreinigungen wie Entkalkung, Desinfektion oder Polierarbeiten",
+        ],
+      },
+      {
+        title: "Fenster- und Glasreinigung",
+        intro:
+          "Unsere Fensterreinigung sorgt für klare Sicht und ein gepflegtes Erscheinungsbild.",
+        points: [
+          "Glasflächen aller Art",
+          "Fensterrahmen und -kanten innen und außen",
+          "Fensterbänke",
+          "Glastüren, Schaufenster, Spiegel, Wintergärten und Fassaden",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getPillar(slug: string): Pillar | undefined {
@@ -224,7 +223,7 @@ export const reasons: { title: string; body: string }[] = [
   },
   {
     title: "Alles aus einer Hand",
-    body: "Sicherheitsdienst, Reinigungsservice und Eventsupport gebündelt bei einem Ansprechpartner — abgestimmt statt fragmentiert.",
+    body: "Sicherheitsdienst, Eventsupport und Reinigungsservice gebündelt bei einem Ansprechpartner — abgestimmt statt fragmentiert.",
   },
   {
     title: "Geschultes Fachpersonal",

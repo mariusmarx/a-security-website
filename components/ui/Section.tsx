@@ -1,11 +1,11 @@
 import { cn } from "@/lib/utils";
 
-type Tone = "paper" | "cream" | "ink";
+type Tone = "paper" | "cream" | "bone";
 
 const toneClass: Record<Tone, string> = {
   paper: "bg-paper text-slate",
   cream: "bg-cream text-slate",
-  ink: "bg-ink text-mist",
+  bone: "bg-bone text-slate",
 };
 
 /** A vertically-rhythmic page section with optional light/dark tone. */
@@ -35,7 +35,6 @@ export function Section({
         "relative scroll-mt-24",
         toneClass[tone],
         pad,
-        tone === "ink" && "[--color-line:var(--color-line-inv)]",
         className,
       )}
     >

@@ -33,7 +33,8 @@ function classes(variant: Variant, size: "md" | "lg", className?: string) {
   return cn(
     "group/btn inline-flex items-center justify-center gap-2.5 rounded-none",
     "text-[0.78rem] font-medium uppercase tracking-[0.14em] leading-none",
-    "transition-colors duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer",
+    // exclude outline-color so the focus ring snaps in instantly (WCAG 2.4.7)
+    "transition-[color,background-color,border-color] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer",
     size === "lg" ? "px-8 py-5" : "px-6 py-4",
     variants[variant],
     className,

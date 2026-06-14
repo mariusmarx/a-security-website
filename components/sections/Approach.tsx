@@ -6,7 +6,7 @@ import { process } from "@/content/services";
 
 export function Approach() {
   return (
-    <Section tone="cream" size="lg">
+    <Section tone="paper" size="lg">
       <Container>
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-12 md:gap-x-8">
           <div className="md:col-span-5 lg:col-span-4">
@@ -14,7 +14,7 @@ export function Approach() {
               <Eyebrow index="04">Arbeitsweise</Eyebrow>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="mt-8 text-balance text-h1 font-semibold uppercase tracking-tight text-ink">
+              <h2 className="mt-8 text-balance text-h1 text-ink">
                 So arbeiten wir.
               </h2>
             </Reveal>
@@ -34,7 +34,7 @@ export function Approach() {
                     <span className="font-mono text-[0.85rem] tabular-nums text-stone sm:col-span-2">
                       {step.step}
                     </span>
-                    <h3 className="text-h3 font-medium tracking-tight text-ink sm:col-span-4">
+                    <h3 className="text-h3 text-ink sm:col-span-4">
                       {step.title}
                     </h3>
                     <p className="hyphenate text-body text-slate sm:col-span-6">
