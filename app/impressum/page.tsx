@@ -28,31 +28,30 @@ export default function ImpressumPage() {
             </p>
 
             <h2>Vertreten durch</h2>
-            <p>{company.proprietor}</p>
+            <p>Geschäftsführer: {company.proprietor}</p>
 
             <h2>Kontakt</h2>
             <p>
-              Telefon: {contact.phoneLabel}
+              Telefon (Büro): {contact.phoneLabel}
               <br />
-              Mobil: {contact.mobileLabel}
-              <br />
-              Fax: {contact.fax}
+              Telefon (24/7): {contact.emergencyLabel}
               <br />
               E-Mail: <a href={contact.emailHref}>{contact.email}</a>
             </p>
 
             <h2>Registereintrag</h2>
             <p>
-              [TODO: Rechtsform und Registereintrag bestätigen. Das aktuelle
-              Impressum weist keine GmbH/HRB-Nummer aus; bei einem
-              Einzelunternehmen entfällt der Handelsregistereintrag, andernfalls
-              bitte Registergericht und HRB-Nummer ergänzen.]
+              Eingetragen im Handelsregister.
+              <br />
+              Registergericht: Amtsgericht Charlottenburg
+              <br />
+              Registernummer: HRB 249953 B
             </p>
 
             <h2>Umsatzsteuer-ID</h2>
             <p>
-              Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [TODO:
-              USt-IdNr.]
+              Die Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG wird nach
+              Vergabe durch das Finanzamt ergänzt.
             </p>
 
             <h2>Erlaubnis nach § 34a GewO</h2>
@@ -60,10 +59,8 @@ export default function ImpressumPage() {
               Zugelassenes Sicherheitsunternehmen gemäß § 34a Gewerbeordnung
               (Bewachungsgewerbe).
               <br />
-              Aufsichtsbehörde: Industrie- und Handelskammer zu Berlin (IHK
-              Berlin)
-              <br />
-              Erlaubnisbehörde: [TODO: zuständiges Ordnungsamt / Gewerbeamt]
+              Erlaubnisbehörde nach § 34a GewO: Bezirksamt
+              Friedrichshain-Kreuzberg von Berlin
             </p>
 
             <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
@@ -97,12 +94,6 @@ export default function ImpressumPage() {
               verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter
               jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
               Informationen zu überwachen.
-            </p>
-
-            <p className="text-small text-stone">
-              [Hinweis: Dieses Impressum enthält Platzhalter und muss vor der
-              Veröffentlichung mit den echten Unternehmensdaten vervollständigt
-              und rechtlich geprüft werden.]
             </p>
           </Prose>
         </Container>

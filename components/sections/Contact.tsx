@@ -37,7 +37,7 @@ export function Contact() {
 
             <Reveal delay={0.4}>
               <dl className="mt-12 flex flex-col divide-y divide-line border-y border-line">
-                <Channel label="Telefon">
+                <Channel label="Büro">
                   <a
                     href={contact.phoneHref}
                     className="tabular-nums transition-colors hover:text-gold-deep"
@@ -45,12 +45,12 @@ export function Contact() {
                     {contact.phoneLabel}
                   </a>
                 </Channel>
-                <Channel label="Mobil">
+                <Channel label="24/7">
                   <a
-                    href={contact.mobileHref}
+                    href={contact.emergencyHref}
                     className="tabular-nums transition-colors hover:text-gold-deep"
                   >
-                    {contact.mobileLabel}
+                    {contact.emergencyLabel}
                   </a>
                 </Channel>
                 <Channel label="E-Mail">

@@ -33,7 +33,7 @@ export const pillars: Pillar[] = [
   {
     slug: "sicherheit",
     index: "01",
-    name: "Sicherheit",
+    name: "Security",
     tagline: "Sicherheit aus einer Hand",
     summary:
       "Professioneller Sicherheitsdienst aus Berlin — für Unternehmen, Veranstaltungen und Privatpersonen. National und international, diskret und individuell abgestimmt.",
@@ -161,7 +161,7 @@ export const pillars: Pillar[] = [
   {
     slug: "reinigung",
     index: "03",
-    name: "Reinigung",
+    name: "Cleaning",
     tagline: "Sauberkeit mit System",
     summary:
       "Sauberkeit als Teil von Werterhalt und professionellem Auftreten. Zuverlässige Reinigung für Unternehmen, Privathaushalte und Veranstaltungsorte.",

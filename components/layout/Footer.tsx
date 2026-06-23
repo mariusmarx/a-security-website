@@ -60,7 +60,13 @@ export function Footer() {
               href={contact.phoneHref}
               className="font-mono text-[0.8rem] tabular-nums tracking-wide text-slate transition-colors hover:text-ink"
             >
-              {contact.phoneLabel}
+              <span className="text-stone">Büro</span> {contact.phoneLabel}
+            </a>
+            <a
+              href={contact.emergencyHref}
+              className="font-mono text-[0.8rem] tabular-nums tracking-wide text-slate transition-colors hover:text-ink"
+            >
+              <span className="text-stone">24/7</span> {contact.emergencyLabel}
             </a>
             <a
               href={contact.emailHref}

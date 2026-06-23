@@ -36,12 +36,13 @@ export default function DatenschutzPage() {
 
             <h2>2. Hosting</h2>
             <p>
-              Diese Website wird bei einem externen Dienstleister gehostet
-              ([TODO: Hosting-Anbieter, z. B. Vercel Inc. / Hetzner]). Die
-              personenbezogenen Daten, die auf dieser Website erfasst werden,
-              werden auf den Servern des Hosters gespeichert. Der Einsatz erfolgt
-              im Interesse einer sicheren und effizienten Bereitstellung unseres
-              Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO).
+              Diese Website wird als statische Website über GitHub Pages
+              gehostet, einen Dienst der GitHub, Inc. (88 Colin P. Kelly Jr.
+              Street, San Francisco, CA 94107, USA). Beim Aufruf der Seiten
+              verarbeitet der Hoster technisch notwendige Zugriffsdaten (siehe
+              Server-Log-Dateien). Der Einsatz erfolgt im Interesse einer
+              sicheren und effizienten Bereitstellung unseres Online-Angebots
+              (Art. 6 Abs. 1 lit. f DSGVO).
             </p>
 
             <h2>3. Server-Log-Dateien</h2>
@@ -92,13 +93,6 @@ export default function DatenschutzPage() {
               {" "}
               <span className="whitespace-nowrap">„https://&ldquo;</span> in der
               Adresszeile Ihres Browsers.
-            </p>
-
-            <p className="text-small text-stone">
-              [Hinweis: Diese Datenschutzerklärung ist ein Entwurf mit
-              Platzhaltern. Sie muss an die tatsächlich eingesetzten Dienste
-              (Hosting, Analyse, Schriftarten, etc.) angepasst und rechtlich
-              geprüft werden.]
             </p>
           </Prose>
         </Container>

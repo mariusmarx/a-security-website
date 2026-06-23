@@ -12,7 +12,7 @@ export function Prose({
     <div
       className={cn(
         "max-w-[68ch] text-body text-slate",
-        "[&_h2]:mb-3 [&_h2]:mt-14 [&_h2]:text-h4 [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-ink first:[&_h2]:mt-0",
+        "[&_h2]:mb-3 [&_h2]:mt-14 [&_h2]:text-h4 [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-ink [&>h2:first-child]:mt-0",
         "[&_h3]:mb-2 [&_h3]:mt-8 [&_h3]:text-body [&_h3]:font-semibold [&_h3]:text-ink",
         "[&_p]:mt-4 [&_p]:hyphenate",
         "[&_a]:underline [&_a]:decoration-gold-deep/50 [&_a]:underline-offset-4 [&_a]:hover:text-ink",

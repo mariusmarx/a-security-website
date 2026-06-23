@@ -23,7 +23,7 @@ export async function generateMetadata({
     description: p.summary,
     alternates: { canonical: `/${p.slug}` },
     openGraph: {
-      title: `${name} — A-Security & Service`,
+      title: `${name} — A-Security & Service GmbH`,
       description: p.summary,
     },
   };

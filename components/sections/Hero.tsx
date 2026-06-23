@@ -60,7 +60,7 @@ export function Hero() {
 
         <div className="lg:max-w-[54%]">
           <Reveal y={14}>
-            <Eyebrow>Sicherheit · Eventsupport · Reinigung</Eyebrow>
+            <Eyebrow>Security · Eventsupport · Cleaning</Eyebrow>
           </Reveal>
 
           <div className="relative mt-7">
@@ -104,7 +104,7 @@ export function Hero() {
           >
             <Magnetic strength={0.25}>
               <ButtonLink href="/#kontakt" variant="primary" size="lg">
-                Angebot anfragen
+                Kostenlose Beratung
               </ButtonLink>
             </Magnetic>
             <ButtonLink

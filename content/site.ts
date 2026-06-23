@@ -7,12 +7,14 @@
  */
 
 export const company = {
-  name: "A-Security & Service",
-  // The live Impressum lists the entity as "A-Security" (proprietor Pedram
-  // Aghel), with no "GmbH" suffix and no HRB — i.e. not a registered GmbH.
-  // TODO: confirm the exact registered legal form/name for the Impressum.
-  legalName: "A-Security",
+  // Trade name shown across the marketing site.
+  name: "A-Security & Service GmbH",
+  // Registered legal entity — confirmed by the client (2026-06-23):
+  // A-Security&Service GmbH, Amtsgericht Charlottenburg HRB 249953 B.
+  legalName: "A-Security&Service GmbH",
   shortName: "A-Security",
+  // Geschäftsführer / vertretungsberechtigte Person for the Impressum.
+  // TODO: confirm the GmbH's registered managing director (assumed Pedram Aghel).
   proprietor: "Pedram Aghel",
   claim: "Sicherheit, Eventsupport und Reinigung aus einer Hand.",
   city: "Berlin",
@@ -21,27 +23,29 @@ export const company = {
   since: "2010",
 } as const;
 
+// Contact facts confirmed by the client (2026-06-23) — replaced 1:1.
 export const contact = {
-  phoneLabel: "+49 (0)30 283 711 37",
-  phoneHref: "tel:+493028371137",
-  mobileLabel: "+49 (0)172 800 30 30",
-  mobileHref: "tel:+491728003030",
-  fax: "+49 (0)30 350 503 63",
-  email: "info@a-security.de",
-  emailHref: "mailto:info@a-security.de",
+  // Büro (office) line
+  phoneLabel: "+49 (0)30 350 50 363",
+  phoneHref: "tel:+493035050363",
+  // 24/7 Einsatzbereitschaft
+  emergencyLabel: "+49 (0)30 28 37 11 37",
+  emergencyHref: "tel:+493028371137",
+  email: "info@a-securityservice.de",
+  emailHref: "mailto:info@a-securityservice.de",
   address: {
-    street: "Kreuzbergstraße 37–38",
+    street: "Kreuzbergstraße 37/38",
     zip: "10965",
     city: "Berlin",
   },
-  // TODO: confirm office hours (not published on the live site).
-  hours: "Mo–Fr 9–18 Uhr · 24/7 Einsatzbereitschaft",
+  hours: "Büro: 09:00–15:00 Uhr",
 } as const;
 
+// Service labels in English per client request (2026-06-23); URLs stay German.
 export const nav: { label: string; href: string }[] = [
-  { label: "Sicherheit", href: "/sicherheit" },
+  { label: "Security", href: "/sicherheit" },
   { label: "Eventsupport", href: "/eventsupport" },
-  { label: "Reinigung", href: "/reinigung" },
+  { label: "Cleaning", href: "/reinigung" },
   { label: "Über uns", href: "/#ueber-uns" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
@@ -84,9 +88,10 @@ export const referenceClients: string[] = [
 ];
 
 export const siteMeta = {
-  title: "A-Security & Service — Sicherheit, Reinigung & Eventsupport in Berlin",
+  title:
+    "A-Security & Service GmbH — Security, Eventsupport & Cleaning in Berlin",
   description:
-    "Professioneller Sicherheitsdienst aus Berlin: Eventsicherheit, Objekt- & Personenschutz, Reinigung und Eventsupport — diskret, zuverlässig und individuell. National und international.",
+    "Sicherheitsdienst aus Berlin — seit 2010: Eventsicherheit, Objekt- & Personenschutz, Eventsupport und Reinigung. Diskret, zuverlässig und individuell. National und international.",
   // TODO: confirm the launch domain (live company site is www.a-security.de).
   url: "https://www.a-security.de",
   locale: "de_DE",

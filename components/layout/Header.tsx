@@ -76,7 +76,7 @@ export function Header() {
                   : "border-ink bg-ink text-paper hover:bg-slate hover:border-slate",
               )}
             >
-              Kontakt
+              Kostenlose Beratung
             </Link>
           </nav>
 

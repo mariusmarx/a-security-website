@@ -5,13 +5,14 @@ import "./globals.css";
 import { MotionProvider } from "@/components/providers/MotionProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingCta } from "@/components/layout/FloatingCta";
 import { siteMeta, company } from "@/content/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMeta.url),
   title: {
     default: siteMeta.title,
-    template: "%s — A-Security & Service",
+    template: "%s — A-Security & Service GmbH",
   },
   description: siteMeta.description,
   applicationName: company.legalName,
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
     "Reinigung Berlin",
     "Eventsupport",
     "A-Security",
+    "A-Security & Service GmbH",
   ],
   alternates: { canonical: "/" },
   openGraph: {
@@ -69,6 +71,7 @@ export default function RootLayout({
           <Header />
           <main id="main">{children}</main>
           <Footer />
+          <FloatingCta />
         </MotionProvider>
       </body>
     </html>

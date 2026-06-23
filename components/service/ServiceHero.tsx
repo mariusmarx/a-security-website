@@ -102,7 +102,7 @@ export function ServiceHero({ pillar }: { pillar: Pillar }) {
             <div className="mt-10">
               <Magnetic strength={0.25}>
                 <ButtonLink href="/#kontakt" variant="primary" size="lg">
-                  Angebot anfragen
+                  Kostenlose Beratung
                 </ButtonLink>
               </Magnetic>
             </div>

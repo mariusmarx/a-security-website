@@ -32,8 +32,8 @@ export function Why() {
           <div className="md:col-span-4 md:col-start-9">
             <Reveal delay={0.1}>
               <p className="measure-tight text-body text-slate">
-                Seit {company.since} steht A-Security &amp; Service in Berlin für
-                Sicherheit, Eventsupport und Reinigung — gebündelt bei einem
+                Seit {company.since} steht die A-Security &amp; Service GmbH in
+                Berlin für Sicherheit, Eventsupport und Reinigung — gebündelt bei einem
                 festen Ansprechpartner, mit langjähriger Erfahrung, geschultem
                 Fachpersonal und dem Anspruch, national wie international
                 zuverlässig zu liefern.

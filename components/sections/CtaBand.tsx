@@ -9,7 +9,7 @@ import { contact } from "@/content/site";
 export function CtaBand({
   title = "Sprechen wir über Ihr Projekt.",
   href = "/#kontakt",
-  cta = "Angebot anfragen",
+  cta = "Kostenlose Beratung",
 }: {
   title?: string;
   href?: string;
