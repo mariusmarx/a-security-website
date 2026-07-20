@@ -13,8 +13,8 @@ import { EASE } from "@/lib/motion";
 import type { Pillar } from "@/content/services";
 
 const heroImage: Record<Pillar["slug"], string> = {
-  sicherheit: "/images/event-redcarpet.jpg",
-  eventsupport: "/images/event-gala-live.jpg",
+  sicherheit: "/images/security-guard-night.jpg",
+  eventsupport: "/images/event-courtyard.jpg",
   reinigung: "/images/chauffeur-venue.jpg",
 };
 
@@ -93,8 +93,11 @@ export function ServiceHero({ pillar }: { pillar: Pillar }) {
           </div>
 
           <Reveal delay={0.45} y={14}>
-            <p className="measure mt-8 text-balance text-lead text-stone">
-              {pillar.tagline} — {pillar.summary}
+            <p className="measure mt-8 text-balance text-lead text-ink">
+              {pillar.tagline}.
+            </p>
+            <p className="measure mt-4 text-body text-stone">
+              {pillar.summary}
             </p>
           </Reveal>
 

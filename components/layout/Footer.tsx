@@ -26,7 +26,7 @@ export function Footer() {
             {company.claim}
           </p>
           <p className="mt-6 max-w-sm text-small text-stone">
-            {company.name} — Sicherheitsdienst, Eventsupport und Reinigung mit
+            {company.name} — Security, Eventsupport und Cleaning mit
             Sitz in {company.city}, tätig seit {company.since}.
           </p>
         </div>

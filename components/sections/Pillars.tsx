@@ -24,7 +24,7 @@ export function Pillars() {
           <div className="md:col-span-4">
             <Reveal delay={0.1}>
               <p className="measure-tight text-body text-stone">
-                Sicherheit, Eventsupport und Reinigung — koordiniert aus einer
+                Security, Eventsupport und Cleaning — koordiniert aus einer
                 Hand, jede Disziplin mit eigenem Fachpersonal.
               </p>
             </Reveal>

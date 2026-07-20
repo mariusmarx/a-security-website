@@ -7,9 +7,9 @@ import { reasons } from "@/content/services";
 import { company, trustStats } from "@/content/site";
 
 const aboutImages = [
-  { src: "/images/event-gala-live.jpg", alt: "Abendgala in einer Berliner Eventhalle, von A-Security betreut." },
-  { src: "/images/event-lounge-live.jpg", alt: "Empfang in einer Berliner Industrie-Location bei Abendlicht." },
-  { src: "/images/event-hall-live.jpg", alt: "Großveranstaltung in einer Berliner Halle mit Gästen." },
+  { src: "/images/security-team.jpg", alt: "Das geschulte Sicherheitsteam der A-Security & Service GmbH bei einer Abendveranstaltung." },
+  { src: "/images/security-staff-onsite.jpg", alt: "A-Security-Mitarbeiter im Einsatz beim Aufbau einer Veranstaltung in Berlin." },
+  { src: "/images/venue-sacral.jpg", alt: "Stimmungsvoll beleuchtete Berliner Veranstaltungslocation, betreut von A-Security." },
 ];
 
 export function Why() {
@@ -33,7 +33,7 @@ export function Why() {
             <Reveal delay={0.1}>
               <p className="measure-tight text-body text-slate">
                 Seit {company.since} steht die A-Security &amp; Service GmbH in
-                Berlin für Sicherheit, Eventsupport und Reinigung — gebündelt bei einem
+                Berlin für Security, Eventsupport und Cleaning — gebündelt bei einem
                 festen Ansprechpartner, mit langjähriger Erfahrung, geschultem
                 Fachpersonal und dem Anspruch, national wie international
                 zuverlässig zu liefern.
@@ -87,7 +87,7 @@ export function Why() {
         <div className="mt-20 grid grid-cols-1 gap-y-12 md:mt-28 md:grid-cols-12 md:gap-x-8">
           <div className="md:col-span-4">
             <Reveal>
-              <span className="eyebrow text-stone">Warum A-Security</span>
+              <span className="eyebrow text-stone">Warum A-Security&amp;Service</span>
             </Reveal>
             <Reveal delay={0.05}>
               <h3 className="mt-7 text-balance text-h2 text-ink">

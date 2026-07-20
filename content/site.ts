@@ -16,7 +16,7 @@ export const company = {
   // Geschäftsführer / vertretungsberechtigte Person for the Impressum.
   // TODO: confirm the GmbH's registered managing director (assumed Pedram Aghel).
   proprietor: "Pedram Aghel",
-  claim: "Sicherheit, Eventsupport und Reinigung aus einer Hand.",
+  claim: "Security, Eventsupport und Cleaning aus einer Hand.",
   city: "Berlin",
   // Founding year confirmed by client (2026-06-14): the company has been active
   // since 2010 — its long experience should be emphasised across the site.
@@ -58,33 +58,50 @@ export const legalNav: { label: string; href: string }[] = [
 /** Qualitative trust markers — derived from the source docs (no invented figures). */
 export const trustStats: { value: string; label: string }[] = [
   { value: "03", label: "Leistungs­bereiche aus einer Hand" },
-  { value: "§ 34a", label: "Geprüftes Fachpersonal" },
+  {
+    value: "§ 34a",
+    label: "Bewachererlaubnis nach GewO — Unternehmen & Mitarbeiter geprüft",
+  },
   { value: "24/7", label: "Einsatz­bereitschaft" },
   { value: "DE · INT", label: "National & international tätig" },
 ];
 
 /**
- * Clients & references — taken from the supplied logo set.
- * Split into "Aktuelle Kunden" and "Referenzen" per client request.
- * TODO: confirm the correct assignment of each name to current vs. reference,
- * and confirm permission to display each name publicly. (Provisional split.)
+ * Clients & references — supplied by the client (Nikoletta, 2026-07-08) as a
+ * combined "Auszug aus Aktuelle Kunden und Referenzen". Order preserved as given.
+ * NOTE: the placeholder entry "zwzw" from the source list was omitted; a few
+ * spellings (Reichenberger Studios, KINDL) were normalised — confirm with client.
  */
-export const currentClients: string[] = [
-  "Funkhaus Berlin",
-  "Berliner Festspiele",
-  "Factory Berlin",
-  "KINDL",
-];
-
-export const referenceClients: string[] = [
-  "Four Music",
-  "Kickz",
+export const clients: string[] = [
   "Burmester",
+  "Dream Haus",
+  "Medianet",
+  "Funkhaus",
+  "IBB",
+  "Guerilla Produktion",
+  "Bata Bar",
+  "Coco F&B",
+  "Factory Berlin",
+  "Factory Hamburg",
+  "Reichenberger Studios",
+  "LimeLight",
+  "Oxymoron",
+  "Stern & Kreis",
+  "Lichtblick SE",
+  "CIC Campus",
+  "Amano Hotel",
+  "Restaurant Schönbrunn",
+  "Berlin Global Village",
+  "Intermate Media",
+  "Avenir",
   "Sneakersnstuff",
-  "Schönbrunn",
-  "Studio NOW",
-  "Ulmen Television",
-  "Guerilla Production",
+  "SOTO Berlin",
+  "KICKZ",
+  "Schaubühne",
+  "Berliner Festspiele",
+  "JMES",
+  "Everphone",
+  "KINDL — Zentrum für zeitgenössische Kunst",
 ];
 
 export const siteMeta = {

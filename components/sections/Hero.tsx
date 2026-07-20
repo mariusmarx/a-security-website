@@ -73,12 +73,12 @@ export function Hero() {
             />
             <h1 className="text-display text-ink">
               <RevealText
-                label="Sicherheit mit Haltung."
+                label="Mehr als Sicherheit."
                 delay={0.15}
                 lines={[
-                  "Sicherheit",
+                  "Mehr als",
                   <Fragment key="l2">
-                    mit Haltung<span className="text-gold-deep">.</span>
+                    Sicherheit<span className="text-gold-deep">.</span>
                   </Fragment>,
                 ]}
               />

@@ -34,9 +34,9 @@ export const pillars: Pillar[] = [
     slug: "sicherheit",
     index: "01",
     name: "Security",
-    tagline: "Sicherheit aus einer Hand",
+    tagline: "Sicherheit mit Verantwortung",
     summary:
-      "Professioneller Sicherheitsdienst aus Berlin — für Unternehmen, Veranstaltungen und Privatpersonen. National und international, diskret und individuell abgestimmt.",
+      "Professionelle Sicherheitslösungen für Unternehmen, Veranstaltungen und Privatpersonen — individuell geplant, zuverlässig umgesetzt und national sowie international im Einsatz.",
     lead: "Sicherheit bedeutet Vertrauen. Als professioneller Sicherheitsdienst aus Berlin stehen wir für Zuverlässigkeit, Diskretion und individuell abgestimmte Sicherheitslösungen. Unsere Kunden begleiten wir partnerschaftlich — mit klarer Kommunikation, persönlicher Beratung und maßgeschneiderten Konzepten.",
     highlights: [
       "Eventsicherheit",
@@ -46,9 +46,9 @@ export const pillars: Pillar[] = [
       "Hotel- & Messesicherheit",
       "Chauffeur- & Concierge-Services",
     ],
-    image: "/images/event-redcarpet.jpg",
+    image: "/images/security-team-wide.jpg",
     imageAlt:
-      "Diskrete Sicherheitsbegleitung auf einem Empfang bei Abendlicht in Berlin.",
+      "Das Sicherheitsteam der A-Security & Service GmbH vor einem Berliner Veranstaltungsort.",
     groups: [
       {
         title: "Eventsicherheit",
@@ -126,9 +126,9 @@ export const pillars: Pillar[] = [
       "VIP-Betreuung",
       "Veranstaltungspaket (Full-Service)",
     ],
-    image: "/images/event-gala.jpg",
+    image: "/images/event-gala-dinner.jpg",
     imageAlt:
-      "Abendveranstaltung in einer Berliner Eventhalle mit Bühnenlicht und Gästen.",
+      "Festlich eingedeckte Abendveranstaltung in Berlin, betreut von A-Security.",
     groups: [
       {
         title: "Hostessen-Service",
@@ -162,9 +162,9 @@ export const pillars: Pillar[] = [
     slug: "reinigung",
     index: "03",
     name: "Cleaning",
-    tagline: "Sauberkeit mit System",
+    tagline: "Sauberkeit mit Anspruch",
     summary:
-      "Sauberkeit als Teil von Werterhalt und professionellem Auftreten. Zuverlässige Reinigung für Unternehmen, Privathaushalte und Veranstaltungsorte.",
+      "Professionelle Reinigungsdienstleistungen für Unternehmen und Gewerbeobjekte — zuverlässig, diskret und effizient.",
     lead: "Sauberkeit ist ein wesentlicher Bestandteil von Sicherheit, Werterhalt und professionellem Auftreten. Als A-Security & Service GmbH bieten wir zuverlässige Reinigungsdienstleistungen — strukturiert geplant, fachgerecht umgesetzt und regelmäßig kontrolliert.",
     highlights: ["Unterhaltsreinigung", "Grundreinigung", "Fenster- & Glasreinigung"],
     image: "/images/chauffeur-venue.jpg",
@@ -173,7 +173,7 @@ export const pillars: Pillar[] = [
       {
         title: "Unterhaltsreinigung",
         intro:
-          "Die regelmäßige Unterhaltsreinigung gewährleistet dauerhaft hygienische und gepflegte Räumlichkeiten — geeignet für Büros, Praxen, Gewerbeflächen und private Objekte.",
+          "Die regelmäßige Unterhaltsreinigung gewährleistet dauerhaft hygienische und gepflegte Räumlichkeiten — geeignet für Büros, Praxen und Gewerbeflächen.",
         points: [
           "Reinigung und Pflege aller Bodenbeläge",
           "Reinigung von Oberflächen, Arbeits- und Kontaktflächen",
@@ -223,7 +223,7 @@ export const reasons: { title: string; body: string }[] = [
   },
   {
     title: "Alles aus einer Hand",
-    body: "Sicherheitsdienst, Eventsupport und Reinigungsservice gebündelt bei einem Ansprechpartner — abgestimmt statt fragmentiert.",
+    body: "Security, Eventsupport und Cleaning gebündelt bei einem Ansprechpartner — abgestimmt statt fragmentiert.",
   },
   {
     title: "Geschultes Fachpersonal",

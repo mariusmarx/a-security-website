@@ -2,7 +2,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
-import { currentClients, referenceClients } from "@/content/site";
+import { clients } from "@/content/site";
 
 export function Clients() {
   return (
@@ -29,42 +29,40 @@ export function Clients() {
           </div>
         </div>
 
-        {/* Two rosters, stacked — aktuelle Kunden above, Referenzen below */}
-        <div className="mt-14 flex flex-col gap-14 md:mt-20 md:gap-20">
-          <ClientList label="Aktuelle Kunden" items={currentClients} />
-          <ClientList label="Referenzen" items={referenceClients} />
+        {/* Combined roster ("Auszug aus Aktuelle Kunden und Referenzen") */}
+        <div className="mt-14 md:mt-20">
+          <Reveal>
+            <div className="flex items-center justify-between border-t border-line-strong pt-5">
+              <span className="eyebrow flex items-center gap-3.5 text-stone">
+                <span aria-hidden className="h-px w-7 bg-gold-deep/70" />
+                Auszug
+              </span>
+              <span className="font-mono text-[0.7rem] tabular-nums tracking-[0.16em] text-greige">
+                {String(clients.length).padStart(2, "0")}
+              </span>
+            </div>
+          </Reveal>
+
+          <Stagger
+            className="mt-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+            gap={0.03}
+          >
+            {clients.map((name) => (
+              <StaggerItem key={name}>
+                <div className="flex items-baseline gap-3.5 border-b border-line py-5 sm:py-6">
+                  <span
+                    aria-hidden
+                    className="mt-2 h-px w-4 shrink-0 bg-gold-deep/45"
+                  />
+                  <span className="text-balance text-h4 font-medium leading-snug text-ink">
+                    {name}
+                  </span>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
         </div>
       </Container>
     </Section>
-  );
-}
-
-function ClientList({ label, items }: { label: string; items: string[] }) {
-  return (
-    <div>
-      <Reveal>
-        <div className="flex items-center justify-between border-t border-line-strong pt-5">
-          <span className="eyebrow flex items-center gap-3.5 text-stone">
-            <span aria-hidden className="h-px w-7 bg-gold-deep/70" />
-            {label}
-          </span>
-          <span className="font-mono text-[0.7rem] tabular-nums tracking-[0.16em] text-greige">
-            {String(items.length).padStart(2, "0")}
-          </span>
-        </div>
-      </Reveal>
-
-      <Stagger className="mt-2" gap={0.05}>
-        {items.map((name) => (
-          <StaggerItem key={name}>
-            <div className="border-b border-line py-5 md:py-6">
-              <span className="text-balance text-h4 font-medium text-ink">
-                {name}
-              </span>
-            </div>
-          </StaggerItem>
-        ))}
-      </Stagger>
-    </div>
   );
 }
