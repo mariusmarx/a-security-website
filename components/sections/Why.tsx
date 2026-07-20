@@ -7,9 +7,9 @@ import { reasons } from "@/content/services";
 import { company, trustStats } from "@/content/site";
 
 const aboutImages = [
-  { src: "/images/security-team.jpg", alt: "Das geschulte Sicherheitsteam der A-Security & Service GmbH bei einer Abendveranstaltung." },
-  { src: "/images/security-staff-onsite.jpg", alt: "A-Security-Mitarbeiter im Einsatz beim Aufbau einer Veranstaltung in Berlin." },
-  { src: "/images/venue-sacral.jpg", alt: "Stimmungsvoll beleuchtete Berliner Veranstaltungslocation, betreut von A-Security." },
+  { src: "/images/event-gala-live.jpg", alt: "Abendgala in einer Berliner Eventhalle, von A-Security betreut." },
+  { src: "/images/event-lounge-live.jpg", alt: "Empfang in einer Berliner Industrie-Location bei Abendlicht." },
+  { src: "/images/event-hall-live.jpg", alt: "Großveranstaltung in einer Berliner Halle mit Gästen." },
 ];
 
 export function Why() {
